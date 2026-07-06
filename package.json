@@ -1,0 +1,14 @@
+{
+  "name": "nelavai-hema-portfolio",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "install-all": "npm install --prefix client && npm install --prefix server",
+    "dev": "concurrently \"npm start --prefix client\" \"npm run dev --prefix server\"",
+    "build": "npm run build --prefix client",
+    "start": "node server/index.js"
+  },
+  "devDependencies": {
+    "concurrently": "^8.2.0"
+  }
+}
