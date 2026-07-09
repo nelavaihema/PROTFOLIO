@@ -5,8 +5,8 @@ html {
 body {
   margin: 0;
   font-family: Inter, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
-  background: #f8fafc;
-  color: #334155;
+  background: linear-gradient(135deg, #f8fbff 0%, #eef6ff 45%, #f8fafc 100%);
+  color: #0f172a;
 }
 
 #root {
@@ -15,4 +15,9 @@ body {
 
 * {
   box-sizing: border-box;
+}
+
+::selection {
+  background: rgba(6, 182, 212, 0.25);
+  color: #0f172a;
 }
