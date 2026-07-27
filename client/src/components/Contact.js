@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import emailjs from "@emailjs/browser";
 
 const Contact = () => {
   const [formData, setFormData] = useState({ name: "", email: "", subject: "", message: "" });
@@ -15,22 +16,29 @@ const Contact = () => {
     setLoading(true);
     setStatus(null);
 
-    try {
-      const response = await fetch("/api/contact", {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify(formData),
-      });
+    const serviceId = "service_en0qjx9";
+    const templateId = "template_9jhk60r";
+    const publicKey = "aJq5O3wIVmkaqeSeQ";
 
-      const data = await response.json();
-      if (response.ok) {
-        setStatus({ type: "success", message: data.message });
-        setFormData({ name: "", email: "", subject: "", message: "" });
-      } else {
-        setStatus({ type: "error", message: data.message || "Unable to send message." });
-      }
+    const templateParams = {
+      from_name: formData.name,
+      from_email: formData.email,
+      to_name: "Portfolio Owner",
+      subject: formData.subject,
+      message: formData.message,
+    };
+
+    try {
+      await emailjs.send(serviceId, templateId, templateParams, publicKey);
+      setStatus({ type: "success", message: "Message sent. I’ll reply soon." });
+      alert("Thank you for reaching out to me, I will get back to you soon!");
+      setFormData({ name: "", email: "", subject: "", message: "" });
     } catch (error) {
-      setStatus({ type: "error", message: "Unable to send message. Please try again." });
+      console.error("EmailJS error:", error);      
+      setStatus({
+        type: "error",
+        message: error?.text || "Unable to send message right now. Please try again.",
+      });
     }
 
     setLoading(false);

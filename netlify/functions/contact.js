@@ -17,8 +17,11 @@ exports.handler = async (event) => {
 
     if (!process.env.SMTP_HOST || !process.env.SMTP_USER || !process.env.SMTP_PASS) {
       return {
-        statusCode: 200,
-        body: JSON.stringify({ status: 'success', message: 'Message received. I’ll reply soon.' })
+        statusCode: 500,
+        body: JSON.stringify({
+          status: 'error',
+          message: 'Email service is not configured. Contact owner to set SMTP_HOST, SMTP_USER, and SMTP_PASS.'
+        })
       };
     }
 

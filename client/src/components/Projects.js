@@ -2,34 +2,60 @@ import React from "react";
 
 const projects = [
   {
-    title: "E-Commerce Platform",
+    title: "Cloud Hygiene Automation Platform",
     description:
-      "A polished marketplace experience with product discovery, cart management, secure checkout, order history, and a modern admin workflow for online retail.",
-    techStack: ["React", "Node.js", "Express", "MongoDB", "JWT", "Stripe"],
-    githubFrontend: "https://github.com/nelavaihema/mern-ecommerce-frontend",
-    githubBackend: "https://github.com/nelavaihema/mern-ecommerce-backend",
-    deployedUrl: "https://mern-ecommerce-demo.netlify.app",
+      "Built a compliance dashboard for cloud operations using React.js and TypeScript with REST APIs and Grafana-based monitoring views.",
+    techStack: ["React.js", "TypeScript", "AWS Lambda", "REST APIs", "Grafana"],
+    highlights: [
+      "Developed reusable UI components and searchable compliance policy views.",
+      "Improved platform performance and supported cloud automation workflows.",
+      "Delivered reporting experiences for operational visibility and compliance tracking.",
+    ],
+    ctaLabel: "Discuss this project",
+    ctaHref: "#contact",
     accent: "from-cyan-500 to-blue-600",
   },
   {
-    title: "Collaborative Task Hub",
+    title: "Voice Mail to Text (VM2TXT)",
     description:
-      "A productivity dashboard for teams to manage tasks, assign work, track deadlines, and collaborate in real time through a clean project workspace.",
-    techStack: ["React", "Redux", "Node.js", "Express", "MongoDB", "Socket.IO"],
-    githubFrontend: "https://github.com/nelavaihema/taskhub-frontend",
-    githubBackend: "https://github.com/nelavaihema/taskhub-backend",
-    deployedUrl: "https://taskhub-demo.vercel.app",
+      "Developed an automation system for converting voicemail workloads into text through AWS-based processing and monitoring pipelines.",
+    techStack: ["AWS ECS", "AWS Transcribe", "DynamoDB", "CloudWatch"],
+    highlights: [
+      "Implemented ECS auto-scaling and DynamoDB lifecycle management.",
+      "Improved production reliability with AWS CLI automation and monitoring.",
+      "Supported high-volume email and voice processing workflows.",
+    ],
+    ctaLabel: "Discuss this project",
+    ctaHref: "#contact",
     accent: "from-violet-500 to-fuchsia-600",
   },
   {
-    title: "Capstone Project — Career Growth Platform",
+    title: "TDP Front Door Automation",
     description:
-      "A full-stack learning and career portal with user authentication, course discovery, role-based dashboards, and a smooth experience for both learners and admins.",
-    techStack: ["React", "Node.js", "Express", "MongoDB", "JWT", "Cloudinary"],
-    githubFrontend: "https://github.com/nelavaihema/capstone-frontend",
-    githubBackend: "https://github.com/nelavaihema/capstone-backend",
-    deployedUrl: "https://career-platform-demo.netlify.app",
+      "Built an enterprise ticket management platform with AI-driven workflows, RBAC controls, analytics dashboards, and admin configuration modules.",
+    techStack: ["React.js", "GraphQL", "REST APIs", "Tailwind CSS"],
+    highlights: [
+      "Created chatbot workflows and operational dashboards for support teams.",
+      "Integrated GraphQL and REST APIs while improving responsiveness and UX.",
+      "Delivered role-based access and configuration tooling for enterprise use.",
+    ],
+    ctaLabel: "Discuss this project",
+    ctaHref: "#contact",
     accent: "from-emerald-500 to-teal-600",
+  },
+  {
+    title: "Online Personalized Fitness Class Booking Platform",
+    description:
+      "Developed a full-stack booking platform for fitness classes with secure authentication, schedules, trainer profiles, payments, and recommendations.",
+    techStack: ["MERN Stack", "React.js", "Node.js", "Express.js", "MongoDB", "JWT"],
+    highlights: [
+      "Implemented class scheduling, booking, rescheduling, cancellation, and availability management.",
+      "Built personalized recommendations, dashboards, reviews, and email notifications.",
+      "Integrated payment flows and secure REST APIs for users, classes, and bookings.",
+    ],
+    ctaLabel: "Discuss this project",
+    ctaHref: "#contact",
+    accent: "from-amber-500 to-orange-600",
   },
 ];
 
@@ -41,9 +67,9 @@ const Projects = () => {
         <div className="mb-10 flex flex-col gap-4 lg:flex-row lg:items-end lg:justify-between">
           <div>
             <p className="text-sm font-semibold uppercase tracking-[0.35em] text-cyan-300">Selected Work</p>
-            <h2 className="mt-3 text-3xl font-semibold text-white sm:text-4xl">Projects</h2>
+            <h2 className="mt-3 text-3xl font-semibold text-white sm:text-4xl">Full-Stack & Cloud Projects</h2>
             <p className="mt-3 max-w-2xl text-base leading-7 text-slate-300">
-              These projects reflect my approach to building complete MERN stack applications with thoughtful UX, secure architecture, and production-ready delivery.
+              These projects reflect my experience building full-stack web applications, cloud-native automation solutions, and enterprise-grade user experiences.
             </p>
           </div>
           <a href="#contact" className="inline-flex items-center justify-center rounded-full border border-white/15 bg-white/10 px-5 py-3 text-sm font-medium text-slate-200 transition hover:border-cyan-400 hover:text-cyan-300">
@@ -51,7 +77,7 @@ const Projects = () => {
           </a>
         </div>
 
-        <div className="grid gap-6 lg:grid-cols-3">
+        <div className="grid gap-6 lg:grid-cols-2">
           {projects.map((project) => (
             <article key={project.title} className="section-shell flex h-full flex-col rounded-3xl bg-slate-900/70 p-7">
               <div className={`mb-5 h-2 rounded-full bg-gradient-to-r ${project.accent}`} />
@@ -67,15 +93,20 @@ const Projects = () => {
                   ))}
                 </div>
               </div>
+              <ul className="mt-6 space-y-2 text-sm leading-7 text-slate-300">
+                {project.highlights.map((highlight) => (
+                  <li key={highlight} className="flex gap-2">
+                    <span className="mt-2 h-2 w-2 shrink-0 rounded-full bg-cyan-400" />
+                    <span>{highlight}</span>
+                  </li>
+                ))}
+              </ul>
               <div className="mt-8 flex flex-wrap gap-3 pt-2">
-                <a href={project.githubFrontend} target="_blank" rel="noreferrer" className="rounded-full border border-white/15 px-3 py-2 text-sm text-slate-200 transition hover:border-cyan-400 hover:text-cyan-300">
-                  Frontend Repo
+                <a href={project.ctaHref} className="rounded-full bg-cyan-500 px-3 py-2 text-sm font-semibold text-slate-950 transition hover:bg-cyan-400">
+                  {project.ctaLabel}
                 </a>
-                <a href={project.githubBackend} target="_blank" rel="noreferrer" className="rounded-full border border-white/15 px-3 py-2 text-sm text-slate-200 transition hover:border-cyan-400 hover:text-cyan-300">
-                  Backend Repo
-                </a>
-                <a href={project.deployedUrl} target="_blank" rel="noreferrer" className="rounded-full bg-cyan-500 px-3 py-2 text-sm font-semibold text-slate-950 transition hover:bg-cyan-400">
-                  Live Demo
+                <a href="https://github.com/nelavaihema" target="_blank" rel="noreferrer" className="rounded-full border border-white/15 px-3 py-2 text-sm text-slate-200 transition hover:border-cyan-400 hover:text-cyan-300">
+                  GitHub Profile
                 </a>
               </div>
             </article>

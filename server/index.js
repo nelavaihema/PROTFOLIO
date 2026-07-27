@@ -12,8 +12,9 @@ app.use(express.json());
 
 const sendMail = async ({ name, email, subject, message }) => {
   if (!process.env.SMTP_HOST || !process.env.SMTP_USER || !process.env.SMTP_PASS) {
-    console.log("Contact request received:", { name, email, subject, message });
-    return null;
+    throw new Error(
+      "SMTP configuration is missing. Set SMTP_HOST, SMTP_USER, and SMTP_PASS to send email."
+    );
   }
 
   const transporter = nodemailer.createTransport({
@@ -29,11 +30,14 @@ const sendMail = async ({ name, email, subject, message }) => {
   const mail = {
     from: `Portfolio Contact <${process.env.SMTP_USER}>`,
     to: process.env.CONTACT_RECEIVER || process.env.SMTP_USER,
+    replyTo: email,
     subject: subject || "New portfolio contact request",
     text: `Name: ${name}\nEmail: ${email}\nSubject: ${subject || "Portfolio message"}\n\nMessage:\n${message}`,
   };
 
-  return transporter.sendMail(mail);
+  const info = await transporter.sendMail(mail);
+  console.log("Email send result:", info);
+  return info;
 };
 
 app.post("/api/contact", async (req, res) => {
@@ -43,8 +47,8 @@ app.post("/api/contact", async (req, res) => {
       return res.status(400).json({ status: "error", message: "Please provide name, email, and message." });
     }
 
-    await sendMail({ name, email, subject, message });
-    return res.json({ status: "success", message: "Message received. I’ll reply soon." });
+    const info = await sendMail({ name, email, subject, message });
+    return res.json({ status: "success", message: "Message received. I’ll reply soon.", info });
   } catch (error) {
     console.error("Contact API error:", error);
     return res.status(500).json({ status: "error", message: "Unable to submit message right now." });

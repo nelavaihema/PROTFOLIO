@@ -8,10 +8,10 @@ const Hero = () => {
         <div className="max-w-3xl">
           <p className="text-sm font-semibold uppercase tracking-[0.38em] text-cyan-300">Full Stack Developer</p>
           <h1 className="mt-4 text-4xl font-semibold leading-tight sm:text-5xl lg:text-6xl">
-            I build modern MERN products that look sharp and scale smoothly.
+            I build full-stack web apps and cloud-ready products that feel polished and scale smoothly.
           </h1>
           <p className="mt-6 text-lg leading-8 text-slate-300 sm:text-xl">
-            I craft responsive web applications with a strong focus on user experience, clean architecture, and production-ready delivery.
+            I craft responsive web applications with React.js, Angular, Node.js, TypeScript, and AWS, combining clean architecture with dependable delivery.
           </p>
           <div className="mt-8 flex flex-col gap-4 sm:flex-row sm:items-center">
             <a href="#projects" className="inline-flex items-center justify-center rounded-full bg-cyan-500 px-6 py-3 text-sm font-semibold text-slate-950 shadow-lg shadow-cyan-500/20 transition hover:bg-cyan-400">
@@ -35,7 +35,7 @@ const Hero = () => {
               <p className="text-xs uppercase tracking-[0.25em] text-slate-400">Years</p>
             </div>
             <div className="rounded-2xl border border-violet-400/20 bg-violet-500/10 p-3 text-center">
-              <p className="text-2xl font-semibold text-violet-300">10+</p>
+              <p className="text-2xl font-semibold text-violet-300">4+</p>
               <p className="text-xs uppercase tracking-[0.25em] text-slate-400">Projects</p>
             </div>
           </div>

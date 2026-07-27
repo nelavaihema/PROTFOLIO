@@ -1,5 +1,11 @@
 import React from "react";
 
+const certifications = [
+  "React.js Training and Assessment – JBL Mandatory",
+  "Angular and Generative AI Training – HCL Technologies",
+  "Full Stack Development Training – GUVI",
+];
+
 const About = () => {
   return (
     <section id="about" className="px-6 py-20 text-slate-100 md:px-12">
@@ -10,7 +16,7 @@ const About = () => {
             <h2 className="mt-3 text-3xl font-semibold text-white sm:text-4xl">A developer who enjoys solving real problems with clean code.</h2>
           </div>
           <p className="max-w-2xl text-base leading-7 text-slate-300">
-            I bring together frontend craftsmanship, backend reliability, and product thinking to deliver web experiences that feel modern and dependable.
+            I bring together frontend craftsmanship, backend reliability, and product thinking to deliver web experiences that feel modern, scalable, and dependable.
           </p>
         </div>
         <div className="grid gap-6 lg:grid-cols-[1.5fr_1fr]">
@@ -30,6 +36,28 @@ const About = () => {
               <li><span className="font-semibold text-white">Role:</span> Full Stack Developer</li>
               <li><span className="font-semibold text-white">Email:</span> nelavaihema31128@gmail.com</li>
               <li><span className="font-semibold text-white">GitHub:</span> github.com/nelavaihema</li>
+            </ul>
+          </div>
+        </div>
+
+        <div className="mt-6 grid gap-6 lg:grid-cols-2">
+          <div className="section-shell rounded-3xl bg-slate-900/70 p-8">
+            <h3 className="text-xl font-semibold text-white">Certifications</h3>
+            <ul className="mt-5 space-y-3 text-slate-300">
+              {certifications.map((item) => (
+                <li key={item} className="flex gap-2">
+                  <span className="mt-2 h-2 w-2 shrink-0 rounded-full bg-cyan-400" />
+                  <span>{item}</span>
+                </li>
+              ))}
+            </ul>
+          </div>
+          <div className="section-shell rounded-3xl bg-slate-900/70 p-8">
+            <h3 className="text-xl font-semibold text-white">Education</h3>
+            <ul className="mt-5 space-y-3 text-slate-300">
+              <li><span className="font-semibold text-white">Degree:</span> Bachelor of Engineering in Computer Science</li>
+              <li><span className="font-semibold text-white">College:</span> Siddharth Institute of Engineering and Technology</li>
+              <li><span className="font-semibold text-white">Years:</span> 2018 – 2022</li>
             </ul>
           </div>
         </div>
