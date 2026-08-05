@@ -1,9 +1,16 @@
 import React from "react";
 
 const certifications = [
-  "React.js Training and Assessment – JBL Mandatory",
-  "Angular and Generative AI Training – HCL Technologies",
-  "Full Stack Development Training – GUVI",
+  {
+    name: "React.js Training and Assessment – JBL Mandatory",
+  },
+  {
+    name: "Angular and Generative AI Training – HCL Technologies",
+  },
+  {
+    name: "GUVI Full Stack Development Training",
+    href: "https://www.zenclass.in/certificateDownload/g4A0LyPtIml4slZE",
+  },
 ];
 
 const About = () => {
@@ -22,10 +29,10 @@ const About = () => {
         <div className="grid gap-6 lg:grid-cols-[1.5fr_1fr]">
           <div className="section-shell rounded-3xl bg-slate-900/70 p-8">
             <p className="text-lg leading-8 text-slate-300">
-              I’m a results-driven Full Stack Developer with 3.6+ years of experience building scalable web applications using React.js, Angular, TypeScript, Node.js, Express, MongoDB, SQL, and AWS.
+              I’m a Full Stack Developer with 3.6 years of experience building web applications using React, Angular, Node, Express, MongoDB, and AWS.
             </p>
             <p className="mt-5 text-lg leading-8 text-slate-300">
-              My work spans enterprise automation platforms, GraphQL integrations, and cloud-native systems. I focus on building intuitive interfaces and dependable APIs that help users and businesses move faster.
+              I focus on clean interfaces and reliable backend services that solve real business problems.
             </p>
           </div>
           <div className="section-shell rounded-3xl bg-slate-900/70 p-8">
@@ -45,9 +52,20 @@ const About = () => {
             <h3 className="text-xl font-semibold text-white">Certifications</h3>
             <ul className="mt-5 space-y-3 text-slate-300">
               {certifications.map((item) => (
-                <li key={item} className="flex gap-2">
+                <li key={item.name} className="flex gap-2">
                   <span className="mt-2 h-2 w-2 shrink-0 rounded-full bg-cyan-400" />
-                  <span>{item}</span>
+                  {item.href ? (
+                    <a
+                      href={item.href}
+                      target="_blank"
+                      rel="noreferrer"
+                      className="text-slate-300 transition hover:text-cyan-300"
+                    >
+                      {item.name}
+                    </a>
+                  ) : (
+                    <span>{item.name}</span>
+                  )}
                 </li>
               ))}
             </ul>

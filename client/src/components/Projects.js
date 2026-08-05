@@ -46,15 +46,15 @@ const projects = [
   {
     title: "Online Personalized Fitness Class Booking Platform",
     description:
-      "Developed a full-stack booking platform for fitness classes with secure authentication, schedules, trainer profiles, payments, and recommendations.",
+      "Built a full-stack booking platform with secure auth, class scheduling, trainer profiles, payments, and booking management.",
     techStack: ["MERN Stack", "React.js", "Node.js", "Express.js", "MongoDB", "JWT"],
     highlights: [
-      "Implemented class scheduling, booking, rescheduling, cancellation, and availability management.",
-      "Built personalized recommendations, dashboards, reviews, and email notifications.",
-      "Integrated payment flows and secure REST APIs for users, classes, and bookings.",
+      "Implemented class scheduling, booking, rescheduling, and availability management.",
+      "Built recommendations, dashboards, reviews, and email notifications.",
+      "Deployed the live project to Netlify for user access.",
     ],
-    ctaLabel: "Discuss this project",
-    ctaHref: "#contact",
+    ctaLabel: "View live site",
+    ctaHref: "https://hema-fitness-new-repo.netlify.app/",
     accent: "from-amber-500 to-orange-600",
   },
 ];
