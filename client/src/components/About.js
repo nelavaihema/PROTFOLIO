@@ -69,6 +69,9 @@ const About = () => {
                 </li>
               ))}
             </ul>
+            <p className="mt-4 text-sm text-slate-400">
+              GUVI certificate: <a href="https://www.zenclass.in/certificateDownload/g4A0LyPtIml4slZE" target="_blank" rel="noopener noreferrer" className="underline hover:text-cyan-300">https://www.zenclass.in/certificateDownload/g4A0LyPtIml4slZE</a>
+            </p>
           </div>
           <div className="section-shell rounded-3xl bg-slate-900/70 p-8">
             <h3 className="text-xl font-semibold text-white">Education</h3>
