@@ -17,6 +17,9 @@ const Hero = () => {
             <a href="#projects" className="inline-flex items-center justify-center rounded-full bg-cyan-500 px-6 py-3 text-sm font-semibold text-slate-950 shadow-lg shadow-cyan-500/20 transition hover:bg-cyan-400">
               View Projects
             </a>
+            <a href="https://drive.google.com/uc?export=download&id=1geO4XgeucxYYqUgMSl9T0gaOBpwhJGqK" className="inline-flex items-center justify-center rounded-full border border-white/15 bg-white/10 px-6 py-3 text-sm font-medium text-slate-200 transition hover:border-cyan-400 hover:text-cyan-300">
+              Download Resume
+            </a>
             <a href="#contact" className="inline-flex items-center justify-center rounded-full border border-white/15 bg-white/10 px-6 py-3 text-sm font-medium text-slate-200 transition hover:border-cyan-400 hover:text-cyan-300">
               Contact Me
             </a>

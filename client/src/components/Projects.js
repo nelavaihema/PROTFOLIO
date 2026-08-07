@@ -1,50 +1,61 @@
 import React from "react";
+import holidayImg from "../assets/project-holiday.svg";
+import movieImg from "../assets/project-movie.svg";
+import recipeImg from "../assets/project-recipe.svg";
+import fitnessImg from "../assets/project-fitness.svg";
 
 const projects = [
   {
-    title: "Cloud Hygiene Automation Platform",
+    title: "Public Holiday Finder",
+    image: holidayImg,
     description:
-      "Built a compliance dashboard for cloud operations using React.js and TypeScript with REST APIs and Grafana-based monitoring views.",
-    techStack: ["React.js", "TypeScript", "AWS Lambda", "REST APIs", "Grafana"],
+      "A responsive React app that fetches public holiday data from the Nager.Date API. Users can select a country and year to view holidays, filter results, and manage previous searches.",
+    techStack: ["React.js", "Tailwind CSS", "Fetch API", "Nager.Date API"],
     highlights: [
-      "Developed reusable UI components and searchable compliance policy views.",
-      "Improved platform performance and supported cloud automation workflows.",
-      "Delivered reporting experiences for operational visibility and compliance tracking.",
+      "Search holidays by country and year with a loading indicator and error handling.",
+      "Country dropdown, year input, search history with re-fetch, and clear history button.",
+      "Responsive UI with optional filters (month/type), CSV export, and upcoming holiday highlights.",
     ],
-    ctaLabel: "Discuss this project",
-    ctaHref: "#contact",
+    ctaLabel: "Live demo",
+    ctaHref: "https://public-holiday-finder.netlify.app/",
+    repoHref: "https://github.com/nelavaihema/mini-project",
     accent: "from-cyan-500 to-blue-600",
   },
   {
-    title: "Voice Mail to Text (VM2TXT)",
+    title: "Movie Review App",
+    image: movieImg,
     description:
-      "Developed an automation system for converting voicemail workloads into text through AWS-based processing and monitoring pipelines.",
-    techStack: ["AWS ECS", "AWS Transcribe", "DynamoDB", "CloudWatch"],
+      "A responsive React app for browsing, searching, and rating movies. Uses OMDb (or mock data) to display details, with a star-based rating UI and filters by genre and year.",
+    techStack: ["React.js", "Tailwind CSS", "OMDb API", "React Hooks"],
     highlights: [
-      "Implemented ECS auto-scaling and DynamoDB lifecycle management.",
-      "Improved production reliability with AWS CLI automation and monitoring.",
-      "Supported high-volume email and voice processing workflows.",
+      "Search and filter movies by title, genre, year, and rating.",
+      "Detailed movie view with poster, synopsis, cast (when available), and release info.",
+      "Star-based rating system with average rating display and responsive layout.",
     ],
-    ctaLabel: "Discuss this project",
-    ctaHref: "#contact",
-    accent: "from-violet-500 to-fuchsia-600",
+    ctaLabel: "Live demo",
+    ctaHref: "https://movie-app-omdb-project.netlify.app/",
+    repoHref: "https://github.com/nelavaihema/Movie-react",
+    accent: "from-violet-500 to-pink-500",
   },
   {
-    title: "TDP Front Door Automation",
+    title: "Recipe App",
+    image: recipeImg,
     description:
-      "Built an enterprise ticket management platform with AI-driven workflows, RBAC controls, analytics dashboards, and admin configuration modules.",
-    techStack: ["React.js", "GraphQL", "REST APIs", "Tailwind CSS"],
+      "Dynamic recipe explorer built with React and Tailwind that fetches meals from TheMealDB. Browse, search, filter by category or ingredient, and view full recipe details.",
+    techStack: ["React.js", "Tailwind CSS", "Axios", "TheMealDB API"],
     highlights: [
-      "Created chatbot workflows and operational dashboards for support teams.",
-      "Integrated GraphQL and REST APIs while improving responsiveness and UX.",
-      "Delivered role-based access and configuration tooling for enterprise use.",
+      "Search recipes by name or keyword and filter by category or ingredient.",
+      "Full recipe detail view with instructions, ingredients list, and video link when available.",
+      "Optional favorites persisted to localStorage for quick access.",
     ],
-    ctaLabel: "Discuss this project",
-    ctaHref: "#contact",
-    accent: "from-emerald-500 to-teal-600",
+    ctaLabel: "Live demo",
+    ctaHref: "https://recipe-projectreact.netlify.app/",
+    repoHref: "https://github.com/nelavaihema/recipe-project",
+    accent: "from-emerald-400 to-amber-500",
   },
   {
     title: "Online Personalized Fitness Class Booking Platform",
+    image: fitnessImg,
     description:
       "Built a full-stack booking platform with secure auth, class scheduling, trainer profiles, payments, and booking management.",
     techStack: ["MERN Stack", "React.js", "Node.js", "Express.js", "MongoDB", "JWT"],
@@ -53,8 +64,9 @@ const projects = [
       "Built recommendations, dashboards, reviews, and email notifications.",
       "Deployed the live project to Netlify for user access.",
     ],
-    ctaLabel: "View live site",
+    ctaLabel: "Live demo",
     ctaHref: "https://hema-fitness-new-repo.netlify.app/",
+    repoHref: "https://github.com/nelavaihema/fitness-project",
     accent: "from-amber-500 to-orange-600",
   },
 ];
@@ -81,6 +93,14 @@ const Projects = () => {
           {projects.map((project) => (
             <article key={project.title} className="section-shell flex h-full flex-col rounded-3xl bg-slate-900/70 p-7">
               <div className={`mb-5 h-2 rounded-full bg-gradient-to-r ${project.accent}`} />
+              {project.image && (
+                <div className="relative mb-6 overflow-hidden rounded-3xl border border-white/10 bg-slate-950/50 shadow-2xl shadow-cyan-500/10">
+                  <img src={project.image} alt={`${project.title} screenshot`} className="h-48 w-full object-cover transition duration-500 hover:scale-105" />
+                  <div className="absolute inset-x-0 bottom-0 bg-gradient-to-t from-slate-950/90 to-transparent px-4 py-3 text-sm text-slate-200">
+                    {project.title}
+                  </div>
+                </div>
+              )}
               <h3 className="text-2xl font-semibold text-white">{project.title}</h3>
               <p className="mt-4 text-sm leading-7 text-slate-300">{project.description}</p>
               <div className="mt-6 rounded-2xl border border-white/10 bg-slate-950/60 p-4">
@@ -102,11 +122,11 @@ const Projects = () => {
                 ))}
               </ul>
               <div className="mt-8 flex flex-wrap gap-3 pt-2">
-                <a href={project.ctaHref} className="rounded-full bg-cyan-500 px-3 py-2 text-sm font-semibold text-slate-950 transition hover:bg-cyan-400">
+                <a href={project.ctaHref} target="_blank" rel="noreferrer" className="rounded-full bg-cyan-500 px-3 py-2 text-sm font-semibold text-slate-950 transition hover:bg-cyan-400">
                   {project.ctaLabel}
                 </a>
-                <a href="https://github.com/nelavaihema" target="_blank" rel="noreferrer" className="rounded-full border border-white/15 px-3 py-2 text-sm text-slate-200 transition hover:border-cyan-400 hover:text-cyan-300">
-                  GitHub Profile
+                <a href={project.repoHref} target="_blank" rel="noreferrer" className="rounded-full border border-white/15 px-3 py-2 text-sm text-slate-200 transition hover:border-cyan-400 hover:text-cyan-300">
+                  View source
                 </a>
               </div>
             </article>

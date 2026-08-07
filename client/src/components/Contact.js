@@ -59,7 +59,10 @@ const Contact = () => {
             <div className="mt-6 space-y-4 text-slate-300">
               <p><span className="font-semibold text-white">Email:</span> nelavaihema31128@gmail.com</p>
               <p><span className="font-semibold text-white">Location:</span> Chennai, India</p>
-              <p><span className="font-semibold text-white">LinkedIn:</span> linkedin.com/in/nelavai-hema-20527920a</p>
+              <p>
+                <span className="font-semibold text-white">LinkedIn:</span>
+                <a href="https://linkedin.com/in/nelavai-hema-20527920a" className="ml-2 text-cyan-300 hover:underline">linkedin.com/in/nelavai-hema-20527920a</a>
+              </p>
             </div>
           </div>
           <form onSubmit={handleSubmit} className="section-shell rounded-3xl bg-slate-900/70 p-8">
