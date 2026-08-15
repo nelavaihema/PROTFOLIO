@@ -2,9 +2,6 @@ import React from "react";
 
 const certifications = [
   {
-    name: "React.js Training and Assessment – JBL Mandatory",
-  },
-  {
     name: "GUVI Full Stack Development Training",
     href: "https://www.zenclass.in/certificateDownload/g4A0LyPtIml4slZE",
   },
