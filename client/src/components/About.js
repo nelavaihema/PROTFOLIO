@@ -5,9 +5,6 @@ const certifications = [
     name: "React.js Training and Assessment – JBL Mandatory",
   },
   {
-    name: "Angular and Generative AI Training – HCL Technologies",
-  },
-  {
     name: "GUVI Full Stack Development Training",
     href: "https://www.zenclass.in/certificateDownload/g4A0LyPtIml4slZE",
   },
@@ -69,9 +66,20 @@ const About = () => {
                 </li>
               ))}
             </ul>
-            <p className="mt-4 text-sm text-slate-400">
-              GUVI certificate: <a href="https://www.zenclass.in/certificateDownload/g4A0LyPtIml4slZE" target="_blank" rel="noopener noreferrer" className="underline hover:text-cyan-300">https://www.zenclass.in/certificateDownload/g4A0LyPtIml4slZE</a>
-            </p>
+            <div className="mt-4 text-sm text-slate-400">
+              <p className="mb-2">Certificate links (plain URLs to copy):</p>
+              <ul className="space-y-1">
+                {certifications.map((c) => (
+                  <li key={`link-${c.name}`}>
+                    {c.href ? (
+                      <a href={c.href} target="_blank" rel="noopener noreferrer" className="underline hover:text-cyan-300">{c.href}</a>
+                    ) : (
+                      <span className="text-slate-500">{c.name}: Link not available</span>
+                    )}
+                  </li>
+                ))}
+              </ul>
+            </div>
           </div>
           <div className="section-shell rounded-3xl bg-slate-900/70 p-8">
             <h3 className="text-xl font-semibold text-white">Education</h3>

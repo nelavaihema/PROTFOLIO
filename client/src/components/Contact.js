@@ -63,6 +63,10 @@ const Contact = () => {
                 <span className="font-semibold text-white">LinkedIn:</span>
                 <a href="https://linkedin.com/in/nelavai-hema-20527920a" className="ml-2 text-cyan-300 hover:underline">linkedin.com/in/nelavai-hema-20527920a</a>
               </p>
+              <p>
+                <span className="font-semibold text-white">Resume:</span>
+                <a href="https://drive.google.com/file/d/1tP82cxHz5tq23wUUoZhmOuzKxJoQ2NcS/view?usp=sharing" target="_blank" rel="noopener noreferrer" className="ml-2 text-cyan-300 hover:underline">Open </a>
+              </p>
             </div>
           </div>
           <form onSubmit={handleSubmit} className="section-shell rounded-3xl bg-slate-900/70 p-8">

@@ -9,8 +9,8 @@ const projects = [
     title: "Public Holiday Finder",
     image: holidayImg,
     description:
-      "A responsive React app that fetches public holiday data from the Nager.Date API. Users can select a country and year to view holidays, filter results, and manage previous searches.",
-    techStack: ["React.js", "Tailwind CSS", "Fetch API", "Nager.Date API"],
+      "A full-stack application with a Node/Express backend that caches public holiday data from the Nager.Date API. Users can select country/year, save favorite queries to their account, and view search history from a MongoDB-backed API.",
+    techStack: ["React.js", "Tailwind CSS", "Node.js", "Express.js", "MongoDB", "Nager.Date API"],
     highlights: [
       "Search holidays by country and year with a loading indicator and error handling.",
       "Country dropdown, year input, search history with re-fetch, and clear history button.",
@@ -25,8 +25,8 @@ const projects = [
     title: "Movie Review App",
     image: movieImg,
     description:
-      "A responsive React app for browsing, searching, and rating movies. Uses OMDb (or mock data) to display details, with a star-based rating UI and filters by genre and year.",
-    techStack: ["React.js", "Tailwind CSS", "OMDb API", "React Hooks"],
+      "A full-stack movie review platform with user auth, persistent reviews, and an Express API that aggregates OMDb data with user-submitted ratings. Features user profiles, review moderation, and a dashboard for analytics.",
+    techStack: ["React.js", "Tailwind CSS", "Node.js", "Express.js", "MongoDB", "OMDb API"],
     highlights: [
       "Search and filter movies by title, genre, year, and rating.",
       "Detailed movie view with poster, synopsis, cast (when available), and release info.",
@@ -41,8 +41,8 @@ const projects = [
     title: "Recipe App",
     image: recipeImg,
     description:
-      "Dynamic recipe explorer built with React and Tailwind that fetches meals from TheMealDB. Browse, search, filter by category or ingredient, and view full recipe details.",
-    techStack: ["React.js", "Tailwind CSS", "Axios", "TheMealDB API"],
+      "A full-stack recipe manager with user accounts, saved collections, and a backend API that stores user recipes and favorites. Syncs with TheMealDB for discovery while persisting user content in MongoDB.",
+    techStack: ["React.js", "Tailwind CSS", "Node.js", "Express.js", "MongoDB", "TheMealDB API"],
     highlights: [
       "Search recipes by name or keyword and filter by category or ingredient.",
       "Full recipe detail view with instructions, ingredients list, and video link when available.",
