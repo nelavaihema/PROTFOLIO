@@ -2,7 +2,7 @@ import React from "react";
 
 const certifications = [
   {
-    name: "GUVI Full Stack Development Training",
+    name: "GUVI Frontend Development Training",
     href: "https://www.zenclass.in/certificateDownload/g4A0LyPtIml4slZE",
   },
 ];
@@ -23,10 +23,10 @@ const About = () => {
         <div className="grid gap-6 lg:grid-cols-[1.5fr_1fr]">
           <div className="section-shell rounded-3xl bg-slate-900/70 p-8">
             <p className="text-lg leading-8 text-slate-300">
-              I’m a Full Stack Developer with 3.6 years of experience building web applications using React, Angular, Node, Express, MongoDB, and AWS.
+              I’m a Frontend Developer with 3.6 years of experience creating responsive interfaces, interactive dashboards, and user-centric web applications using React, Angular, TypeScript, and modern UI tools.
             </p>
             <p className="mt-5 text-lg leading-8 text-slate-300">
-              I focus on clean interfaces and reliable backend services that solve real business problems.
+              I care deeply about clean design, performance, accessibility, and smooth user experiences that make product interactions feel natural and effective.
             </p>
           </div>
           <div className="section-shell rounded-3xl bg-slate-900/70 p-8">
@@ -34,9 +34,12 @@ const About = () => {
             <ul className="mt-5 space-y-3 text-slate-300">
               <li><span className="font-semibold text-white">Location:</span> Chennai, India</li>
               <li><span className="font-semibold text-white">Experience:</span> 3.6 years</li>
-              <li><span className="font-semibold text-white">Role:</span> Full Stack Developer</li>
+              <li><span className="font-semibold text-white">Role:</span> Frontend Developer</li>
               <li><span className="font-semibold text-white">Email:</span> nelavaihema31128@gmail.com</li>
-              <li><span className="font-semibold text-white">GitHub:</span> github.com/nelavaihema</li>
+              <li>
+                <span className="font-semibold text-white">GitHub:</span>
+                <a href="https://github.com/nelavaihema" target="_blank" rel="noopener noreferrer" className="ml-2 text-cyan-300 hover:underline">GitHub Profile</a>
+              </li>
             </ul>
           </div>
         </div>
@@ -64,12 +67,12 @@ const About = () => {
               ))}
             </ul>
             <div className="mt-4 text-sm text-slate-400">
-              <p className="mb-2">Certificate links (plain URLs to copy):</p>
-              <ul className="space-y-1">
-                {certifications.map((c) => (
+              <p className="mb-2">Certificate links:</p>
+              <ul className="space-y-2">
+                {certifications.map((c, index) => (
                   <li key={`link-${c.name}`}>
                     {c.href ? (
-                      <a href={c.href} target="_blank" rel="noopener noreferrer" className="underline hover:text-cyan-300">{c.href}</a>
+                      <a href={c.href} target="_blank" rel="noopener noreferrer" className="text-cyan-300 underline hover:text-cyan-200">Certificate {index + 1}</a>
                     ) : (
                       <span className="text-slate-500">{c.name}: Link not available</span>
                     )}

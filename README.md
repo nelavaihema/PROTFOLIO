@@ -1,6 +1,6 @@
 # Nelavai Hema Portfolio
 
-A full-stack portfolio website built with React, Tailwind CSS, and Express.
+A frontend-focused portfolio website built with React, Tailwind CSS, and modern UI practices, with project stacks that can extend into full-stack technologies such as Node.js, Express.js, and MongoDB.
 
 ## Setup
 

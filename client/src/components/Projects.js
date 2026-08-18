@@ -9,12 +9,12 @@ const projects = [
     title: "Public Holiday Finder",
     image: holidayImg,
     description:
-      "A full-stack application with a Node/Express backend that caches public holiday data from the Nager.Date API. Users can select country/year, save favorite queries to their account, and view search history from a MongoDB-backed API.",
-    techStack: ["React.js", "Tailwind CSS", "Node.js", "Express.js", "MongoDB", "Nager.Date API"],
+      "A responsive frontend experience for exploring public holidays by country and year, with fast filtering, saved searches, and easy-to-read results.",
+    techStack: ["React.js", "JavaScript", "CSS", "Tailwind CSS", "REST API", "Node.js", "Express.js", "Local state"],
     highlights: [
-      "Search holidays by country and year with a loading indicator and error handling.",
-      "Country dropdown, year input, search history with re-fetch, and clear history button.",
-      "Responsive UI with optional filters (month/type), CSV export, and upcoming holiday highlights.",
+      "Search holidays by country and year with clear loading states and error handling.",
+      "Filter results by month and holiday type for a cleaner user experience.",
+      "Show saved search history and quick access to upcoming holiday highlights.",
     ],
     ctaLabel: "Live demo",
     ctaHref: "https://public-holiday-finder.netlify.app/",
@@ -25,12 +25,12 @@ const projects = [
     title: "Movie Review App",
     image: movieImg,
     description:
-      "A full-stack movie review platform with user auth, persistent reviews, and an Express API that aggregates OMDb data with user-submitted ratings. Features user profiles, review moderation, and a dashboard for analytics.",
-    techStack: ["React.js", "Tailwind CSS", "Node.js", "Express.js", "MongoDB", "OMDb API"],
+      "A user-focused movie discovery app with search, rating, and review flows designed to feel polished and engaging on both desktop and mobile.",
+    techStack: ["React.js", "JavaScript", "CSS", "Tailwind CSS", "API integration", "Node.js", "Express.js", "UI/UX design"],
     highlights: [
-      "Search and filter movies by title, genre, year, and rating.",
-      "Detailed movie view with poster, synopsis, cast (when available), and release info.",
-      "Star-based rating system with average rating display and responsive layout.",
+      "Search and filter movies by title, genre, year, and rating with a streamlined interface.",
+      "Display detailed movie metadata, cast info, and ratings in a clear, readable layout.",
+      "Build a responsive review experience with star-based interactions and visual feedback.",
     ],
     ctaLabel: "Live demo",
     ctaHref: "https://movie-app-omdb-project.netlify.app/",
@@ -41,12 +41,12 @@ const projects = [
     title: "Recipe App",
     image: recipeImg,
     description:
-      "A full-stack recipe manager with user accounts, saved collections, and a backend API that stores user recipes and favorites. Syncs with TheMealDB for discovery while persisting user content in MongoDB.",
-    techStack: ["React.js", "Tailwind CSS", "Node.js", "Express.js", "MongoDB", "TheMealDB API"],
+      "A frontend recipe platform for browsing dishes, checking ingredients, and saving favorites in a clean, conversion-friendly interface.",
+    techStack: ["React.js", "JavaScript", "CSS", "Tailwind CSS", "TheMealDB API", "Node.js", "Express.js", "Responsive layout"],
     highlights: [
-      "Search recipes by name or keyword and filter by category or ingredient.",
-      "Full recipe detail view with instructions, ingredients list, and video link when available.",
-      "Optional favorites persisted to localStorage for quick access.",
+      "Search recipes by name or ingredient and browse results with thoughtful filtering.",
+      "Present recipe steps, ingredient lists, and media in a polished content layout.",
+      "Support quick favorites and a mobile-first browsing experience.",
     ],
     ctaLabel: "Live demo",
     ctaHref: "https://recipe-projectreact.netlify.app/",
@@ -57,12 +57,12 @@ const projects = [
     title: "Online Personalized Fitness Class Booking Platform",
     image: fitnessImg,
     description:
-      "Built a full-stack booking platform with secure auth, class scheduling, trainer profiles, payments, and booking management.",
-    techStack: ["MERN Stack", "React.js", "Node.js", "Express.js", "MongoDB", "JWT"],
+      "A frontend booking dashboard that simplifies class discovery, scheduling, and trainer selection through a clear, customer-friendly experience.",
+    techStack: ["React.js", "JavaScript", "CSS", "Tailwind CSS", "Booking UI", "Node.js", "Express.js", "Form validation"],
     highlights: [
-      "Implemented class scheduling, booking, rescheduling, and availability management.",
-      "Built recommendations, dashboards, reviews, and email notifications.",
-      "Deployed the live project to Netlify for user access.",
+      "Create a guided flow for scheduling classes, booking sessions, and checking availability.",
+      "Design trainer profiles, dashboard views, and responsive layouts that improve usability.",
+      "Surface booking, review, and recommendations in a modern app experience.",
     ],
     ctaLabel: "Live demo",
     ctaHref: "https://hema-fitness-new-repo.netlify.app/",
@@ -79,9 +79,9 @@ const Projects = () => {
         <div className="mb-10 flex flex-col gap-4 lg:flex-row lg:items-end lg:justify-between">
           <div>
             <p className="text-sm font-semibold uppercase tracking-[0.35em] text-cyan-300">Selected Work</p>
-            <h2 className="mt-3 text-3xl font-semibold text-white sm:text-4xl">Full-Stack & Cloud Projects</h2>
+            <h2 className="mt-3 text-3xl font-semibold text-white sm:text-4xl">Frontend Projects</h2>
             <p className="mt-3 max-w-2xl text-base leading-7 text-slate-300">
-              These projects reflect my experience building full-stack web applications, cloud-native automation solutions, and enterprise-grade user experiences.
+              These projects reflect my experience building responsive, user-focused frontend applications with polished interfaces, clear flows, and strong UX decisions.
             </p>
           </div>
           <a href="#contact" className="inline-flex items-center justify-center rounded-full border border-white/15 bg-white/10 px-5 py-3 text-sm font-medium text-slate-200 transition hover:border-cyan-400 hover:text-cyan-300">

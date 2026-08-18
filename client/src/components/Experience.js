@@ -6,11 +6,10 @@ const experience = [
     company: "HCL Technologies — Verizon Client",
     period: "Jan 2024 – Feb 2026",
     bullets: [
-      "Developed enterprise Full Stack applications using React.js, TypeScript, GraphQL and REST APIs.",
-      "Built reusable frontend components and integrated backend services.",
-      "Worked with cloud-based applications using AWS services.",
-      "Developed interactive dashboards and reporting modules.",
-      "Collaborated with backend, AI and DevOps teams.",
+      "Built responsive web applications and reusable UI components using React.js, TypeScript, and modern frontend patterns.",
+      "Developed interactive dashboards, reporting modules, and API-driven user experiences.",
+      "Worked closely with backend and DevOps teams to deliver integrated, cloud-ready solutions.",
+      "Improved performance, accessibility, and maintainability across enterprise interfaces.",
     ],
   },
   {
@@ -18,10 +17,10 @@ const experience = [
     company: "HCL Technologies",
     period: "Oct 2022 – Dec 2023",
     bullets: [
-      "Developed responsive web applications using React.js, JavaScript and TypeScript.",
-      "Integrated REST APIs and managed application state.",
-      "Worked on cloud automation using AWS Lambda and Python.",
-      "Participated in code reviews and Agile development.",
+      "Developed responsive web applications using React.js, JavaScript, and TypeScript.",
+      "Integrated REST APIs and managed application state for clean user flows.",
+      "Collaborated on cloud-based automation using AWS Lambda and Python workflows.",
+      "Participated in code reviews and Agile delivery with a strong focus on UI quality.",
     ],
   },
 ];

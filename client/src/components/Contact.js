@@ -1,6 +1,33 @@
 import React, { useState } from "react";
 import emailjs from "@emailjs/browser";
 
+const resumeFileId = "1tP82cxHz5tq23wUUoZhmOuzKxJoQ2NcS";
+const resumeDownloadUrl = `https://drive.google.com/uc?export=download&id=${resumeFileId}&confirm=t`;
+const resumePreviewUrl = `https://drive.google.com/file/d/${resumeFileId}/view?usp=sharing`;
+
+const handleDownloadResume = async (event) => {
+  event.preventDefault();
+
+  try {
+    const response = await fetch(resumeDownloadUrl);
+    if (!response.ok) {
+      throw new Error("Unable to fetch resume");
+    }
+
+    const blob = await response.blob();
+    const downloadUrl = window.URL.createObjectURL(blob);
+    const link = document.createElement("a");
+    link.href = downloadUrl;
+    link.download = "Nelavai-Hema-Frontend-Developer-Resume.pdf";
+    document.body.appendChild(link);
+    link.click();
+    link.remove();
+    window.URL.revokeObjectURL(downloadUrl);
+  } catch (error) {
+    window.location.href = resumeDownloadUrl;
+  }
+};
+
 const Contact = () => {
   const [formData, setFormData] = useState({ name: "", email: "", subject: "", message: "" });
   const [status, setStatus] = useState(null);
@@ -61,11 +88,13 @@ const Contact = () => {
               <p><span className="font-semibold text-white">Location:</span> Chennai, India</p>
               <p>
                 <span className="font-semibold text-white">LinkedIn:</span>
-                <a href="https://linkedin.com/in/nelavai-hema-20527920a" className="ml-2 text-cyan-300 hover:underline">linkedin.com/in/nelavai-hema-20527920a</a>
+                <a href="https://linkedin.com/in/nelavai-hema-20527920a" target="_blank" rel="noopener noreferrer" className="ml-2 text-cyan-300 hover:underline">LinkedIn</a>
               </p>
               <p>
                 <span className="font-semibold text-white">Resume:</span>
-                <a href="https://drive.google.com/file/d/1tP82cxHz5tq23wUUoZhmOuzKxJoQ2NcS/view?usp=sharing" target="_blank" rel="noopener noreferrer" className="ml-2 text-cyan-300 hover:underline">Open </a>
+                <a href={resumeDownloadUrl} onClick={handleDownloadResume} download="Nelavai-Hema-Frontend-Developer-Resume.pdf" rel="noopener noreferrer" className="ml-2 text-cyan-300 hover:underline">Download Resume</a>
+                <span className="mx-2 text-slate-500">|</span>
+                <a href={resumePreviewUrl} target="_blank" rel="noopener noreferrer" className="text-cyan-300 hover:underline">Open Resume PDF</a>
               </p>
             </div>
           </div>
