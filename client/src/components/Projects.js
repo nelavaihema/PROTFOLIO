@@ -1,41 +1,41 @@
 import React from "react";
-import holidayImg from "../assets/project-holiday.svg";
-import movieImg from "../assets/project-movie.svg";
+import doctorImg from "../assets/project-doctor.svg";
+import taskImg from "../assets/project-task.svg";
 import recipeImg from "../assets/project-recipe.svg";
 import fitnessImg from "../assets/project-fitness.svg";
 
 const projects = [
   {
-    title: "Public Holiday Finder",
-    image: holidayImg,
+    title: "Task Management",
+    image: taskImg,
     description:
-      "A responsive frontend experience for exploring public holidays by country and year, with fast filtering, saved searches, and easy-to-read results.",
-    techStack: ["React.js", "JavaScript", "CSS", "Tailwind CSS", "REST API", "Node.js", "Express.js", "Local state"],
+      "A full-stack task management application that helps users securely organize daily work with authentication, task workflows, filtering, and dashboard statistics.",
+    techStack: ["React.js", "JavaScript", "Node.js", "Express.js", "MongoDB", "Mongoose", "JWT", "Tailwind CSS", "REST APIs"],
     highlights: [
-      "Search holidays by country and year with clear loading states and error handling.",
-      "Filter results by month and holiday type for a cleaner user experience.",
-      "Show saved search history and quick access to upcoming holiday highlights.",
+      "Register and log in securely with JWT authentication and protected routes.",
+      "Create, edit, delete, and complete tasks with status, priority, and due-date management.",
+      "Filter tasks by status and view total, pending, in-progress, and completed statistics on the dashboard.",
     ],
-    ctaLabel: "Live demo",
-    ctaHref: "https://public-holiday-finder.netlify.app/",
-    repoHref: "https://github.com/nelavaihema/mini-project",
+    ctaLabel: "View project",
+    ctaHref: "https://github.com/nelavaihema/Task-management",
+    repoHref: "https://github.com/nelavaihema/Task-management",
     accent: "from-cyan-500 to-blue-600",
   },
   {
-    title: "Movie Review App",
-    image: movieImg,
+    title: "MediBook Doctor Appointment App",
+    image: doctorImg,
     description:
-      "A user-focused movie discovery app with search, rating, and review flows designed to feel polished and engaging on both desktop and mobile.",
-    techStack: ["React.js", "JavaScript", "CSS", "Tailwind CSS", "API integration", "Node.js", "Express.js", "UI/UX design"],
+      "A full-stack doctor appointment management application that allows patients to search and book appointments with doctors, while admins manage doctors, patients, and appointment statuses.",
+    techStack: ["React.js", "JavaScript", "Node.js", "Express.js", "MongoDB", "Mongoose", "JWT", "Tailwind CSS", "REST APIs"],
     highlights: [
-      "Search and filter movies by title, genre, year, and rating with a streamlined interface.",
-      "Display detailed movie metadata, cast info, and ratings in a clear, readable layout.",
-      "Build a responsive review experience with star-based interactions and visual feedback.",
+      "Register and log in securely with JWT authentication and role-based patient and admin access.",
+      "Search doctors by specialization, view profiles, choose available dates and time slots, and book appointments.",
+      "Manage appointment history and cancellations, with admin tools for doctor CRUD and appointment status management.",
     ],
-    ctaLabel: "Live demo",
-    ctaHref: "https://movie-app-omdb-project.netlify.app/",
-    repoHref: "https://github.com/nelavaihema/Movie-react",
-    accent: "from-violet-500 to-pink-500",
+    ctaLabel: "View project",
+    ctaHref: "https://github.com/nelavaihema/doctor-appointment",
+    repoHref: "https://github.com/nelavaihema/doctor-appointment",
+    accent: "from-emerald-400 to-cyan-500",
   },
   {
     title: "Recipe App",
@@ -81,7 +81,7 @@ const Projects = () => {
             <p className="text-sm font-semibold uppercase tracking-[0.35em] text-cyan-300">Selected Work</p>
             <h2 className="mt-3 text-3xl font-semibold text-white sm:text-4xl">Frontend Projects</h2>
             <p className="mt-3 max-w-2xl text-base leading-7 text-slate-300">
-              These projects reflect my experience building responsive, user-focused frontend applications with polished interfaces, clear flows, and strong UX decisions.
+              A selection of responsive applications and full-stack projects built around clear user workflows and polished interfaces.
             </p>
           </div>
           <a href="#contact" className="inline-flex items-center justify-center rounded-full border border-white/15 bg-white/10 px-5 py-3 text-sm font-medium text-slate-200 transition hover:border-cyan-400 hover:text-cyan-300">
