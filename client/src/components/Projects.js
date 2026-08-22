@@ -42,7 +42,7 @@ const projects = [
     image: recipeImg,
     description:
       "A frontend recipe platform for browsing dishes, checking ingredients, and saving favorites in a clean, conversion-friendly interface.",
-    techStack: ["React.js", "JavaScript", "CSS", "Tailwind CSS", "TheMealDB API", "Node.js", "Express.js", "Responsive layout"],
+    techStack: ["React.js", "JavaScript", "CSS", "Tailwind CSS", "Responsive layout"],
     highlights: [
       "Search recipes by name or ingredient and browse results with thoughtful filtering.",
       "Present recipe steps, ingredient lists, and media in a polished content layout.",
