@@ -18,7 +18,7 @@ const projects = [
     ],
     ctaLabel: "Live demo",
     ctaHref: "https://taskmanagement-hema.netlify.app",
-    repoHref: "https://github.com/nelavaihema/Task-management",
+    repoHref: "https://gitlab.com/NelavaiHema/task-management",
     accent: "from-cyan-500 to-blue-600",
   },
   {
@@ -34,7 +34,7 @@ const projects = [
     ],
     ctaLabel: "Live demo",
     ctaHref: "https://doctor-appointment-hema.netlify.app/",
-    repoHref: "https://github.com/nelavaihema/doctor-appointment",
+    repoHref: "https://gitlab.com/NelavaiHema/doctor-appointment",
     accent: "from-emerald-400 to-cyan-500",
   },
   {
@@ -65,8 +65,8 @@ const projects = [
       "Surface booking, review, and recommendations in a modern app experience.",
     ],
     ctaLabel: "Live demo",
-    ctaHref: "https://hema-fitness-new-repo.netlify.app/",
-    repoHref: "https://github.com/nelavaihema/fitness-project",
+    ctaHref: "https://fitness-booking.netlify.app/register",
+    repoHref: "https://gitlab.com/NelavaiHema/fitness-project",
     accent: "from-amber-500 to-orange-600",
   },
 ];
