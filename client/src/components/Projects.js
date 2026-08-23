@@ -38,19 +38,19 @@ const projects = [
     accent: "from-emerald-400 to-cyan-500",
   },
   {
-    title: "Recipe App",
+    title: "Library Management System",
     image: recipeImg,
     description:
-      "A frontend recipe platform for browsing dishes, checking ingredients, and saving favorites in a clean, conversion-friendly interface.",
-    techStack: ["React.js", "JavaScript", "CSS", "Tailwind CSS","Node.js", "Express.js","Responsive layout"],
+      "A full-stack library management system for browsing, searching, and managing books with secure authentication and role-based access.",
+    techStack: ["React.js", "JavaScript", "Node.js", "Express.js", "MongoDB", "Mongoose", "JWT", "Tailwind CSS", "REST APIs"],
     highlights: [
-      "Search recipes by name or ingredient and browse results with thoughtful filtering.",
-      "Present recipe steps, ingredient lists, and media in a polished content layout.",
-      "Support quick favorites and a mobile-first browsing experience.",
+      "Register and log in securely with JWT authentication and protected routes.",
+      "Search books by title, author, or ISBN, filter by category, and view availability details.",
+      "Use role-based authorization for admin book and category management, book issuing, returns, and borrowing history.",
     ],
     ctaLabel: "Live demo",
-    ctaHref: "https://recipe-projectreact.netlify.app/",
-    repoHref: "https://github.com/nelavaihema/recipe-project",
+    ctaHref: "https://librarynelavaihemanetlify.netlify.app/",
+    repoHref: "https://github.com/nelavaihema/library-project",
     accent: "from-emerald-400 to-amber-500",
   },
   {
