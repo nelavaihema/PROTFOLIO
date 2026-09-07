@@ -1,4 +1,5 @@
 import React from "react";
+import profilePhoto from "../assets/profile-photo.jpeg";
 
 const resumeFileId = "1tP82cxHz5tq23wUUoZhmOuzKxJoQ2NcS";
 const resumeDownloadUrl = `https://drive.google.com/uc?export=download&id=${resumeFileId}&confirm=t`;
@@ -17,7 +18,7 @@ const handleDownloadResume = async (event) => {
     const downloadUrl = window.URL.createObjectURL(blob);
     const link = document.createElement("a");
     link.href = downloadUrl;
-    link.download = "Nelavai-Hema-Frontend-Developer-Resume.pdf";
+    link.download = "Nelavai-Hema-MERN-Stack-Developer-Resume.pdf";
     document.body.appendChild(link);
     link.click();
     link.remove();
@@ -33,18 +34,18 @@ const Hero = () => {
       <div className="absolute inset-0 -z-10 bg-[radial-gradient(circle_at_top_left,_rgba(34,211,238,0.18),_transparent_35%),radial-gradient(circle_at_bottom_right,_rgba(59,130,246,0.16),_transparent_30%)]" />
       <div className="mx-auto flex max-w-6xl flex-col gap-8 lg:flex-row lg:items-end lg:justify-between">
         <div className="max-w-3xl">
-          <p className="text-sm font-semibold uppercase tracking-[0.38em] text-cyan-300">Frontend Developer</p>
+          <p className="text-sm font-semibold uppercase tracking-[0.38em] text-cyan-300">MERN Stack Developer</p>
           <h1 className="mt-4 text-4xl font-semibold leading-tight sm:text-5xl lg:text-6xl">
             I build responsive web experiences that feel polished, intuitive, and user-first.
           </h1>
           <p className="mt-6 text-lg leading-8 text-slate-300 sm:text-xl">
-            I design and develop modern frontend interfaces using React.js, Angular, TypeScript, Tailwind CSS, and API-driven experiences that prioritize usability and performance.
+            I design and develop modern full-stack applications using MongoDB, Express.js, React.js, and Node.js, with a focus on usability, performance, and reliable user experiences.
           </p>
           <div className="mt-8 flex flex-col gap-4 sm:flex-row sm:items-center">
             <a href="#projects" className="inline-flex items-center justify-center rounded-full bg-cyan-500 px-6 py-3 text-sm font-semibold text-slate-950 shadow-lg shadow-cyan-500/20 transition hover:bg-cyan-400">
               View Projects
             </a>
-            <a href={resumeDownloadUrl} onClick={handleDownloadResume} download="Nelavai-Hema-Frontend-Developer-Resume.pdf" rel="noopener noreferrer" className="inline-flex items-center justify-center rounded-full border border-white/15 bg-white/10 px-6 py-3 text-sm font-medium text-slate-200 transition hover:border-cyan-400 hover:text-cyan-300">
+            <a href={resumeDownloadUrl} onClick={handleDownloadResume} download="Nelavai-Hema-MERN-Stack-Developer-Resume.pdf" rel="noopener noreferrer" className="inline-flex items-center justify-center rounded-full border border-white/15 bg-white/10 px-6 py-3 text-sm font-medium text-slate-200 transition hover:border-cyan-400 hover:text-cyan-300">
               Download Resume
             </a>
             <a href={resumePreviewUrl} target="_blank" rel="noopener noreferrer" className="inline-flex items-center justify-center rounded-full border border-cyan-400/40 bg-cyan-500/10 px-6 py-3 text-sm font-medium text-cyan-200 transition hover:border-cyan-300 hover:text-cyan-100">
@@ -56,6 +57,7 @@ const Hero = () => {
           </div>
         </div>
         <div className="hero-visual section-shell rounded-3xl bg-slate-900/70 p-6">
+          <img src={profilePhoto} alt="Nelavai Hema" className="mb-6 h-64 w-full rounded-2xl bg-slate-950/60 object-contain object-center" />
           <p className="text-sm font-semibold uppercase tracking-[0.3em] text-slate-400">What I bring</p>
           <div className="mt-4 space-y-3 text-sm text-slate-300">
             <p>• End-to-end web apps with clean architecture</p>

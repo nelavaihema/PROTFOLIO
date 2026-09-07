@@ -78,8 +78,7 @@ const Projects = () => {
       <div className="mx-auto max-w-6xl">
         <div className="mb-10 flex flex-col gap-4 lg:flex-row lg:items-end lg:justify-between">
           <div>
-            <p className="text-sm font-semibold uppercase tracking-[0.35em] text-cyan-300">Selected Work</p>
-            <h2 className="mt-3 text-3xl font-semibold text-white sm:text-4xl">Frontend Projects</h2>
+            <h2 className="mt-3 text-3xl font-semibold text-white sm:text-4xl">MERN Stack Projects</h2>
             <p className="mt-3 max-w-2xl text-base leading-7 text-slate-300">
               A selection of responsive applications and full-stack projects built around clear user workflows and polished interfaces.
             </p>

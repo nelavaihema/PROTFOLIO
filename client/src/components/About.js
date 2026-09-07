@@ -23,7 +23,7 @@ const About = () => {
         <div className="grid gap-6 lg:grid-cols-[1.5fr_1fr]">
           <div className="section-shell rounded-3xl bg-slate-900/70 p-8">
             <p className="text-lg leading-8 text-slate-300">
-              I’m a Frontend Developer with 3.6 years of experience creating responsive interfaces, interactive dashboards, and user-centric web applications using React, Angular, TypeScript, and modern UI tools.
+              I’m a MERN Stack Developer with 3.6 years of experience creating responsive interfaces, interactive dashboards, and user-centric web applications using MongoDB, Express.js, React, and Node.js.
             </p>
             <p className="mt-5 text-lg leading-8 text-slate-300">
               I care deeply about clean design, performance, accessibility, and smooth user experiences that make product interactions feel natural and effective.
@@ -34,7 +34,7 @@ const About = () => {
             <ul className="mt-5 space-y-3 text-slate-300">
               <li><span className="font-semibold text-white">Location:</span> Chennai, India</li>
               <li><span className="font-semibold text-white">Experience:</span> 3.6 years</li>
-              <li><span className="font-semibold text-white">Role:</span> Frontend Developer</li>
+              <li><span className="font-semibold text-white">Role:</span> MERN Stack Developer</li>
               <li><span className="font-semibold text-white">Email:</span> nelavaihema31128@gmail.com</li>
               <li>
                 <span className="font-semibold text-white">GitHub:</span>

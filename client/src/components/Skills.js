@@ -13,6 +13,10 @@ const skillGroups = [
     title: "Database & Cloud",
     skills: ["MongoDB", "MySQL", "PostgreSQL", "AWS Lambda", "AWS ECS", "Docker"],
   },
+  {
+    title: "Soft Skills",
+    skills: ["Communication", "Teamwork", "Problem Solving", "Adaptability", "Time Management", "Attention to Detail"],
+  },
 ];
 
 const Skills = () => {
@@ -23,7 +27,7 @@ const Skills = () => {
           <p className="text-sm font-semibold uppercase tracking-[0.35em] text-cyan-300">Technical Skills</p>
           <h2 className="mt-3 text-3xl font-semibold text-white sm:text-4xl">Tools and technologies I use to build modern products.</h2>
         </div>
-        <div className="grid gap-6 lg:grid-cols-3">
+        <div className="grid gap-6 lg:grid-cols-4">
           {skillGroups.map((group) => (
             <div key={group.title} className="section-shell rounded-3xl bg-slate-900/70 p-7">
               <h3 className="text-xl font-semibold text-white">{group.title}</h3>
