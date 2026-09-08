@@ -1,11 +1,5 @@
 import React from "react";
-
-const certifications = [
-  {
-    name: "GUVI Frontend Development Training",
-    href: "https://www.zenclass.in/certificateDownload/g4A0LyPtIml4slZE",
-  },
-];
+import profilePhoto from "../assets/profile-photo.jpeg";
 
 const About = () => {
   return (
@@ -22,12 +16,23 @@ const About = () => {
         </div>
         <div className="grid gap-6 lg:grid-cols-[1.5fr_1fr]">
           <div className="section-shell rounded-3xl bg-slate-900/70 p-8">
-            <p className="text-lg leading-8 text-slate-300">
-              I’m a MERN Stack Developer with 3.6 years of experience creating responsive interfaces, interactive dashboards, and user-centric web applications using MongoDB, Express.js, React, and Node.js.
-            </p>
-            <p className="mt-5 text-lg leading-8 text-slate-300">
-              I care deeply about clean design, performance, accessibility, and smooth user experiences that make product interactions feel natural and effective.
-            </p>
+            <div className="grid items-center gap-8 md:grid-cols-[minmax(0,220px)_1fr]">
+              <div className="mx-auto w-full max-w-[220px]">
+                <img
+                  src={profilePhoto}
+                  alt="Professional portrait of Nelavai Hema"
+                  className="aspect-square w-full rounded-2xl border border-cyan-400/20 object-cover object-center shadow-xl shadow-cyan-950/30"
+                />
+              </div>
+              <div>
+                <p className="text-lg leading-8 text-slate-300">
+                  I’m a MERN Stack Developer with 3.6 years of experience creating responsive interfaces, interactive dashboards, and user-centric web applications using MongoDB, Express.js, React, and Node.js.
+                </p>
+                <p className="mt-5 text-lg leading-8 text-slate-300">
+                  I care deeply about clean design, performance, accessibility, and smooth user experiences that make product interactions feel natural and effective.
+                </p>
+              </div>
+            </div>
           </div>
           <div className="section-shell rounded-3xl bg-slate-900/70 p-8">
             <h3 className="text-xl font-semibold text-white">Quick facts</h3>
@@ -43,44 +48,7 @@ const About = () => {
             </ul>
           </div>
         </div>
-
-        <div className="mt-6 grid gap-6 lg:grid-cols-2">
-          <div className="section-shell rounded-3xl bg-slate-900/70 p-8">
-            <h3 className="text-xl font-semibold text-white">Certifications</h3>
-            <ul className="mt-5 space-y-3 text-slate-300">
-              {certifications.map((item) => (
-                <li key={item.name} className="flex gap-2">
-                  <span className="mt-2 h-2 w-2 shrink-0 rounded-full bg-cyan-400" />
-                  {item.href ? (
-                    <a
-                      href={item.href}
-                      target="_blank"
-                      rel="noreferrer"
-                      className="text-slate-300 transition hover:text-cyan-300"
-                    >
-                      {item.name}
-                    </a>
-                  ) : (
-                    <span>{item.name}</span>
-                  )}
-                </li>
-              ))}
-            </ul>
-            <div className="mt-4 text-sm text-slate-400">
-              <p className="mb-2">Certificate links:</p>
-              <ul className="space-y-2">
-                {certifications.map((c, index) => (
-                  <li key={`link-${c.name}`}>
-                    {c.href ? (
-                      <a href={c.href} target="_blank" rel="noopener noreferrer" className="text-cyan-300 underline hover:text-cyan-200">Certificate {index + 1}</a>
-                    ) : (
-                      <span className="text-slate-500">{c.name}: Link not available</span>
-                    )}
-                  </li>
-                ))}
-              </ul>
-            </div>
-          </div>
+        <div className="mt-6">
           <div className="section-shell rounded-3xl bg-slate-900/70 p-8">
             <h3 className="text-xl font-semibold text-white">Education</h3>
             <ul className="mt-5 space-y-3 text-slate-300">

@@ -91,6 +91,10 @@ const Contact = () => {
                 <a href="https://linkedin.com/in/nelavai-hema-20527920a" target="_blank" rel="noopener noreferrer" className="ml-2 text-cyan-300 hover:underline">LinkedIn</a>
               </p>
               <p>
+                <span className="font-semibold text-white">GitHub:</span>
+                <a href="https://github.com/nelavaihema" target="_blank" rel="noopener noreferrer" className="ml-2 text-cyan-300 hover:underline">GitHub</a>
+              </p>
+              <p>
                 <span className="font-semibold text-white">Resume:</span>
                 <a href={resumeDownloadUrl} onClick={handleDownloadResume} download="Nelavai-Hema-Frontend-Developer-Resume.pdf" rel="noopener noreferrer" className="ml-2 text-cyan-300 hover:underline">Download Resume</a>
                 <span className="mx-2 text-slate-500">|</span>

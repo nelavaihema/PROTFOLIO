@@ -2,9 +2,11 @@ import React from "react";
 
 const links = [
   { label: "About", href: "#about" },
+  { label: "Resume", href: "#resume" },
   { label: "Skills", href: "#skills" },
-  { label: "Projects", href: "#projects" },
   { label: "Experience", href: "#experience" },
+  { label: "Projects", href: "#projects" },
+  { label: "Certifications", href: "#certifications" },
   { label: "Contact", href: "#contact" },
 ];
 

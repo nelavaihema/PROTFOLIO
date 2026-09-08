@@ -18,7 +18,8 @@ const projects = [
     ],
     ctaLabel: "Live demo",
     ctaHref: "https://taskmanagement-hema.netlify.app",
-    repoHref: "https://gitlab.com/NelavaiHema/task-management",
+    frontendRepoHref: "https://gitlab.com/NelavaiHema/task-management",
+    backendRepoHref: "https://gitlab.com/NelavaiHema/task-management",
     accent: "from-cyan-500 to-blue-600",
   },
   {
@@ -34,7 +35,8 @@ const projects = [
     ],
     ctaLabel: "Live demo",
     ctaHref: "https://doctor-appointment-hema.netlify.app/",
-    repoHref: "https://gitlab.com/NelavaiHema/doctor-appointment",
+    frontendRepoHref: "https://gitlab.com/NelavaiHema/doctor-appointment",
+    backendRepoHref: "https://gitlab.com/NelavaiHema/doctor-appointment",
     accent: "from-emerald-400 to-cyan-500",
   },
   {
@@ -50,7 +52,8 @@ const projects = [
     ],
     ctaLabel: "Live demo",
     ctaHref: "https://librarynelavaihemanetlify.netlify.app/",
-    repoHref: "https://github.com/nelavaihema/library-project",
+    frontendRepoHref: "https://github.com/nelavaihema/library-project",
+    backendRepoHref: "https://github.com/nelavaihema/library-project",
     accent: "from-emerald-400 to-amber-500",
   },
   {
@@ -66,7 +69,8 @@ const projects = [
     ],
     ctaLabel: "Live demo",
     ctaHref: "https://fitness-booking.netlify.app/register",
-    repoHref: "https://gitlab.com/NelavaiHema/fitness-project",
+    frontendRepoHref: "https://gitlab.com/NelavaiHema/fitness-project",
+    backendRepoHref: "https://gitlab.com/NelavaiHema/fitness-project",
     accent: "from-amber-500 to-orange-600",
   },
 ];
@@ -78,6 +82,7 @@ const Projects = () => {
       <div className="mx-auto max-w-6xl">
         <div className="mb-10 flex flex-col gap-4 lg:flex-row lg:items-end lg:justify-between">
           <div>
+            <p className="text-sm font-semibold uppercase tracking-[0.35em] text-cyan-300">Projects</p>
             <h2 className="mt-3 text-3xl font-semibold text-white sm:text-4xl">MERN Stack Projects</h2>
             <p className="mt-3 max-w-2xl text-base leading-7 text-slate-300">
               A selection of responsive applications and full-stack projects built around clear user workflows and polished interfaces.
@@ -122,10 +127,13 @@ const Projects = () => {
               </ul>
               <div className="mt-8 flex flex-wrap gap-3 pt-2">
                 <a href={project.ctaHref} target="_blank" rel="noreferrer" className="rounded-full bg-cyan-500 px-3 py-2 text-sm font-semibold text-slate-950 transition hover:bg-cyan-400">
-                  {project.ctaLabel}
+                  Deployed URL
                 </a>
-                <a href={project.repoHref} target="_blank" rel="noreferrer" className="rounded-full border border-white/15 px-3 py-2 text-sm text-slate-200 transition hover:border-cyan-400 hover:text-cyan-300">
-                  View source
+                <a href={project.frontendRepoHref} target="_blank" rel="noreferrer" className="rounded-full border border-white/15 px-3 py-2 text-sm text-slate-200 transition hover:border-cyan-400 hover:text-cyan-300">
+                  Frontend GitHub
+                </a>
+                <a href={project.backendRepoHref} target="_blank" rel="noreferrer" className="rounded-full border border-white/15 px-3 py-2 text-sm text-slate-200 transition hover:border-cyan-400 hover:text-cyan-300">
+                  Backend GitHub
                 </a>
               </div>
             </article>
